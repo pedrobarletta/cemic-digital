@@ -5,7 +5,6 @@ financiado com recursos da PNAB 2025.
 
 ✔ Site estático em HTML/CSS/JS
 ✔ Estrutura simples e acessível
-✔ Pode ser hospedado gratuitamente no GitHub Pages
 
 Páginas incluídas:
 - index.html (Início)
