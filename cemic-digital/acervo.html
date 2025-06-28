@@ -1,1 +1,49 @@
-<h1>Página Acervo</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acervo Digital - CEMIC</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="mb-4">Acervo Digital</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Item do acervo -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="assets/img/acervo/doc1.jpg" class="card-img-top" alt="Documento 1">
+          <div class="card-body">
+            <h5 class="card-title">Registro da Festa de 1950</h5>
+            <p class="card-text">Foto histórica da celebração do aniversário da cidade na década de 50.</p>
+            <a href="acervo/documentos/doc1.pdf" target="_blank" class="btn btn-primary btn-sm">Visualizar</a> 
+            <!--<a href="acervo/documentos/doc1.pdf" download class="btn btn-primary btn-sm">Download</a>-->
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Outro item -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="assets/img/acervo/doc2.jpg" class="card-img-top" alt="Documento 2">
+          <div class="card-body">
+            <h5 class="card-title">Ata da Câmara 1893</h5>
+            <p class="card-text">Documento original digitalizado da ata da Câmara Municipal.</p>
+            <a href="acervo/documentos/doc2.pdf" target="_blank" class="btn btn-primary btn-sm">Visualizar</a>
+            <!--<a href="acervo/documentos/doc2.pdf" download class="btn btn-success btn-sm">Download</a> -->
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Mais colunas podem ser adicionadas -->
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
