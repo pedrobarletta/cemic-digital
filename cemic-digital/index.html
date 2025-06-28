@@ -6,6 +6,7 @@
   <title>CEMIC Digital</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -62,9 +63,23 @@
 
       </div>
     </div>
+
+    <div class="d-flex ms-3">
+  <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm me-2" title="Alternar contraste">🌗</button>
+  <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm me-1" title="Aumentar fonte">A+</button>
+  <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">A-</button>
+</div>
+
   </nav>
 
   <main class="container my-4">
+    <div class="banner-container mb-4">
+  <img src="assets/img/banner.jpg" alt="Imagem institucional de Santana de Parnaíba" class="img-fluid w-100">
+  <div class="banner-text">
+    <h2>CEMIC Digital</h2>
+    <p>Preservando a memória histórica e cultural da cidade</p>
+  </div>
+</div>
     <h1>Bem-vindo ao CEMIC Digital</h1>
     <p>Este é um protótipo de acervo digital histórico-cultural de Santana de Parnaíba.</p>
   </main>

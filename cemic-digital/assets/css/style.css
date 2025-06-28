@@ -11,3 +11,40 @@ footer {
   bottom: 0;
   width: 100%;
 }
+.banner-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-container img {
+  object-fit: cover;
+  height: 350px;
+}
+
+.banner-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast a {
+  color: #00ffff !important;
+}
+
+.high-contrast .navbar,
+.high-contrast footer {
+  background-color: #111 !important;
+}
+
+.high-contrast .banner-text {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
