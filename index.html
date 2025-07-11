@@ -4,91 +4,446 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CEMIC Digital</title>
-  <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Cores da paleta oficial do CEMIC - voltando ao original */
+    :root {
+      --cemic-green-dark: #01221B;
+      --cemic-green: #1a4d3a;
+      --cemic-blue-dark: #2c5f7a;
+      --cemic-blue-light: #87ceeb;
+      --cemic-black: #000000;
+    }
+
+    /* Fontes globais */
+    body {
+      font-family: 'Open Sans', 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Roboto', 'Arial', sans-serif;
+      font-weight: 500;
+    }
+
+    /* Navbar customizada */
+    .navbar-custom {
+      background-color: var(--cemic-green) !important;
+      padding: 0.5rem 0; /* Reduzido para acompanhar o logo menor */
+    }
+
+    .navbar-brand {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      height: 63px !important; /* 30% menor que 90px */
+      width: auto;
+      max-width: none;
+      object-fit: contain;
+    }
+
+    .navbar-nav .nav-link {
+      color: white !important;
+      margin: 0 0.5rem;
+      font-weight: 500;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: var(--cemic-blue-light) !important;
+    }
+
+    .navbar-nav .nav-link.active {
+      color: var(--cemic-blue-light) !important;
+    }
+
+    .dropdown-menu {
+      background-color: var(--cemic-green);
+    }
+
+    .dropdown-item {
+      color: white !important;
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--cemic-green-dark);
+      color: white !important;
+    }
+
+    /* Banner principal - apenas imagem */
+    .hero-banner {
+      background: url('assets/img/banner.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 400px;
+      width: 100%;
+    }
+
+    /* Remover overlay do banner */
+
+    /* Botões de acessibilidade */
+    .accessibility-controls {
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 0.3rem;
+    }
+
+    .accessibility-controls .btn {
+      border-radius: 15px;
+      margin: 0 0.1rem;
+    }
+
+    /* Seção de conteúdo principal */
+    .main-content {
+      padding: 3rem 0;
+      background-color: #f8f9fa;
+    }
+
+    .content-placeholder {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      border-left: 4px solid var(--cemic-green);
+    }
+
+    /* Rodapé reestruturado */
+    .footer-custom {
+      background-color: var(--cemic-green);
+      color: white;
+      padding: 1.5rem 0 0 0;
+      margin: 0;
+    }
+
+    .footer-info {
+      text-align: center;
+      padding: 1rem 0; /* Reduzido de 1.5rem para 1rem */
+      background-color: var(--cemic-green);
+      display: flex;
+      align-items: center; /* Centraliza verticalmente */
+      justify-content: center; /* Centraliza horizontalmente */
+      min-height: 80px; /* Define altura mínima */
+    }
+
+    .footer-info .container {
+      margin: auto; /* Garante centralização total */
+    }
+
+    .footer-info p {
+      margin-bottom: 0.3rem; /* Espaçamento menor entre as linhas */
+      line-height: 1.4; /* Altura da linha ajustada */
+    }
+
+    .footer-info p:last-child {
+      margin-bottom: 0;
+    }
+
+    .footer-logos-section {
+      background-color: white;
+      padding: 2.5rem 0;
+      margin: 0;
+    }
+
+    .footer-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-logo img {
+      max-height: 90px;
+      max-width: 150px;
+      object-fit: contain;
+    }
+
+    /* Responsividade - ajuste do logo em mobile */
+    @media (max-width: 768px) {
+      .navbar-brand img {
+        height: 49px !important; /* 30% menor que 70px */
+        padding: 6px;
+      }
+      
+      .navbar-custom {
+        padding: 0.4rem 0; /* Ainda menor no mobile */
+      }
+      
+      .footer-info {
+        padding: 0.8rem 0; /* Menor no mobile também */
+        min-height: 70px; /* Altura menor no mobile */
+      }
+      
+      .footer-logo img {
+        max-height: 70px;
+        max-width: 120px;
+      }
+      
+      .footer-logos {
+        gap: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">CEMIC Digital</a>
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-cemic.png" alt="CEMIC Digital">
+      </a>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="index.html">Início</a>
-  </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Início</a>
+          </li>
 
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-      Apresentação
-    </a>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="sobre.html">Sobre o CEMIC</a></li>
-      <li><a class="dropdown-item" href="#">Política de Acervos</a></li>
-      <li><a class="dropdown-item" href="#">Equipe do Projeto</a></li>
-    </ul>
-  </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Apresentação
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre.html">Sobre o CEMIC</a></li>
+              <li><a class="dropdown-item" href="#">Política de Acervos</a></li>
+              <li><a class="dropdown-item" href="#">Equipe do Projeto</a></li>
+            </ul>
+          </li>
 
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-      Acervo
-    </a>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="acervo.html">Documentos</a></li>
-      <li><a class="dropdown-item" href="#">Imagens Históricas</a></li>
-      <li><a class="dropdown-item" href="#">Periódicos</a></li>
-    </ul>
-  </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Acervo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="acervo.html">Documentos</a></li>
+              <li><a class="dropdown-item" href="#">Imagens Históricas</a></li>
+              <li><a class="dropdown-item" href="#">Periódicos</a></li>
+            </ul>
+          </li>
 
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-      Publicações
-    </a>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="publicacoes.html">Guias e Artigos</a></li>
-    </ul>
-  </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Publicações
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="publicacoes.html">Guias e Artigos</a></li>
+            </ul>
+          </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="mediacao.html">Mediação Cultural</a>
-  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mediacao.html">Mediação Cultural</a>
+          </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="contato.html">Contato</a>
-  </li>
-</ul>
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Notícias e Eventos</a>
+          </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
+
+        <!-- Controles de Acessibilidade -->
+        <div class="accessibility-controls d-flex ms-3">
+          <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm" title="Alternar contraste">
+            <i class="bi bi-circle-half"></i>
+          </button>
+          <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm" title="Aumentar fonte">
+            A+
+          </button>
+          <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">
+            A-
+          </button>
+        </div>
       </div>
     </div>
-
-    <div class="d-flex ms-3">
-  <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm me-2" title="Alternar contraste">🌗</button>
-  <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm me-1" title="Aumentar fonte">A+</button>
-  <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">A-</button>
-</div>
-
   </nav>
 
-  <main class="container my-4">
-    <div class="banner-container mb-4">
-  <img src="assets/img/banner.jpg" alt="Imagem institucional de Santana de Parnaíba" class="img-fluid w-100">
-  <div class="banner-text">
-    <h2>CEMIC Digital</h2>
-    <p>Preservando a memória histórica e cultural da cidade</p>
-  </div>
-</div>
-    <h1>Bem-vindo ao CEMIC Digital</h1>
-    <p>Este é um protótipo de acervo digital histórico-cultural de Santana de Parnaíba.</p>
-  </main>
+  <!-- BANNER PRINCIPAL - Apenas imagem -->
+  <section class="hero-banner"></section>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">Projeto realizado com recursos da PNAB 2025 • Governo Federal • Ministério da Cultura</p>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <section class="main-content">
+    <div class="container">
+      <div class="content-placeholder">
+        <h2 class="mb-4">Bem-vindo ao CEMIC Digital</h2>
+        <p class="lead">Este é um protótipo de acervo digital histórico-cultural de Santana de Parnaíba.</p>
+        <p>Aqui você poderá acessar documentos históricos, imagens, publicações e muito mais sobre a rica história de nossa cidade.</p>
+        
+        <!-- Placeholder para futuras seções -->
+        <div class="row mt-4">
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <i class="bi bi-file-earmark-text display-4 text-primary mb-3"></i>
+                <h5 class="card-title">Documentos</h5>
+                <p class="card-text">Acesse nossa coleção de documentos históricos</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <i class="bi bi-images display-4 text-success mb-3"></i>
+                <h5 class="card-title">Imagens</h5>
+                <p class="card-text">Explore fotos históricas da cidade</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <i class="bi bi-book display-4 text-warning mb-3"></i>
+                <h5 class="card-title">Publicações</h5>
+                <p class="card-text">Leia artigos e guias sobre nossa história</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ REESTRUTURADO -->
+  <footer class="footer-custom">
+    <!-- Informações do projeto -->
+    <div class="footer-info">
+      <div class="container">
+        <p>Projeto realizado com recursos da PNAB 2025</p>
+        <p>Governo Federal • Ministério da Cultura</p>
+      </div>
+    </div>
+    
+    <!-- Logos dos parceiros em fundo branco -->
+    <div class="footer-logos-section">
+      <div class="container">
+        <div class="footer-logos">
+          <div class="footer-logo">
+            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-santana-parnaiba.png" alt="Prefeitura de Santana de Parnaíba">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-cemic-verde.png" alt="CEMIC" class="logo-cemic-rodape">
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script>
+    // Adicionar estilos de alto contraste mais abrangentes
+    const style = document.createElement('style');
+    style.textContent = `
+      .high-contrast {
+        background-color: #000 !important;
+        color: #fff !important;
+      }
+      
+      .high-contrast .main-content,
+      .high-contrast .content-placeholder {
+        background-color: #000 !important;
+        color: #fff !important;
+      }
+      
+      .high-contrast .card {
+        background-color: #111 !important;
+        color: #fff !important;
+        border: 2px solid #fff !important;
+      }
+      
+      .high-contrast .card-body {
+        background-color: #111 !important;
+        color: #fff !important;
+      }
+      
+      .high-contrast .card-title {
+        color: #fff !important;
+      }
+      
+      .high-contrast .card-text {
+        color: #ccc !important;
+      }
+      
+      .high-contrast h1,
+      .high-contrast h2,
+      .high-contrast h3,
+      .high-contrast h4,
+      .high-contrast h5,
+      .high-contrast h6 {
+        color: #fff !important;
+      }
+      
+      .high-contrast p,
+      .high-contrast .lead {
+        color: #ccc !important;
+      }
+      
+      .high-contrast a {
+        color: #00ffff !important;
+      }
+      
+      .high-contrast .btn-primary,
+      .high-contrast .btn-success,
+      .high-contrast .btn-warning {
+        background-color: #00ffff !important;
+        border-color: #00ffff !important;
+        color: #000 !important;
+      }
+      
+      .high-contrast .bi-file-earmark-text {
+        color: #00ffff !important;
+      }
+      
+      .high-contrast .bi-images {
+        color: #00ffff !important;
+      }
+      
+      .high-contrast .bi-book {
+        color: #00ffff !important;
+      }
+      
+      .high-contrast .navbar,
+      .high-contrast .footer-custom,
+      .high-contrast .footer-info {
+        background-color: #111 !important;
+      }
+      
+      .high-contrast .footer-logos-section {
+        background-color: #222 !important;
+      }
+      
+      /* Logo CEMIC específico no rodapé - trocar para versão branca no modo contraste */
+      .high-contrast .logo-cemic-rodape {
+        content: url('assets/img/logo-cemic.png');
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
