@@ -1,50 +1,387 @@
+/* Cores da paleta oficial do CEMIC */
+:root {
+  --cemic-green-dark: #00211b;
+  --cemic-green: #076633;
+  --cemic-blue-dark: #1a344a;
+  --cemic-blue-light: #9fb4db;
+  --cemic-black: #000000;
+}
+
+/* Fontes globais */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 500;
+}
+
+/* Navbar customizada */
+.navbar-custom {
+  background-color: var(--cemic-green) !important;
+  padding: 0.5rem 0;
 }
 
 .navbar-brand {
-  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
+.navbar-brand img {
+  height: 63px !important;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
 }
-.banner-container {
+
+.navbar-nav .nav-link {
+  color: white !important;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--cemic-blue-light) !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--cemic-blue-light) !important;
+}
+
+.dropdown-menu {
+  background-color: var(--cemic-green);
+}
+
+.dropdown-item {
+  color: white !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--cemic-green-dark);
+  color: white !important;
+}
+
+/* Carrossel do Banner */
+.hero-carousel {
   position: relative;
+  width: 100%;
+  min-height: 400px;
   overflow: hidden;
 }
 
-.banner-container img {
-  object-fit: cover;
-  height: 350px;
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
 }
 
-.banner-text {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  color: white;
-  text-shadow: 1px 1px 5px black;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 10px 20px;
-  border-radius: 5px;
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Estilos de texto removidos - carrossel apenas visual */
+
+/* Indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background-color: white;
+}
+
+.carousel-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Controles de navegação */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+.carousel-control.prev {
+  left: 20px;
+}
+
+.carousel-control.next {
+  right: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-carousel {
+    min-height: 300px;
+  }
+  
+  .carousel-container {
+    height: 300px;
+  }
+  
+  /* Estilos de texto removidos para mobile */
+  
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }
+}
+
+/* Botões de acessibilidade */
+.accessibility-controls {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 0.3rem;
+}
+
+.accessibility-controls .btn {
+  border-radius: 15px;
+  margin: 0 0.1rem;
+}
+
+/* Seção de conteúdo principal */
+.main-content {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+}
+
+.content-placeholder {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  border-left: 4px solid var(--cemic-green);
+}
+
+/* Rodapé reestruturado */
+.footer-custom {
+  background-color: var(--cemic-green);
+  color: white;
+  padding: 1.5rem 0 0 0;
+  margin: 0;
+}
+
+.footer-info {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--cemic-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.footer-info .container {
+  margin: auto;
+}
+
+.footer-info p {
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.footer-info p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-logos-section {
+  background-color: white;
+  padding: 2.5rem 0;
+  margin: 0;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  max-height: 90px;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+/* Estilos de alto contraste */
 .high-contrast {
   background-color: #000 !important;
   color: #fff !important;
+}
+
+.high-contrast .main-content,
+.high-contrast .content-placeholder {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast .card {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+.high-contrast .card-body {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+.high-contrast .card-title {
+  color: #fff !important;
+}
+
+.high-contrast .card-text {
+  color: #ccc !important;
+}
+
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6 {
+  color: #fff !important;
+}
+
+.high-contrast p,
+.high-contrast .lead {
+  color: #ccc !important;
 }
 
 .high-contrast a {
   color: #00ffff !important;
 }
 
+.high-contrast .btn-primary,
+.high-contrast .btn-success,
+.high-contrast .btn-warning {
+  background-color: #00ffff !important;
+  border-color: #00ffff !important;
+  color: #000 !important;
+}
+
+.high-contrast .bi-file-earmark-text {
+  color: #00ffff !important;
+}
+
+.high-contrast .bi-images {
+  color: #00ffff !important;
+}
+
+.high-contrast .bi-book {
+  color: #00ffff !important;
+}
+
 .high-contrast .navbar,
-.high-contrast footer {
+.high-contrast .footer-custom,
+.high-contrast .footer-info {
   background-color: #111 !important;
 }
 
-.high-contrast .banner-text {
-  background-color: rgba(0, 0, 0, 0.8) !important;
+.high-contrast .footer-logos-section {
+  background-color: #222 !important;
+}
+
+.high-contrast .logo-cemic-rodape {
+  content: url('assets/img/logo-cemic.png');
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 49px !important;
+    padding: 6px;
+  }
+  
+  .navbar-custom {
+    padding: 0.4rem 0;
+  }
+  
+  .footer-info {
+    padding: 0.8rem 0;
+    min-height: 70px;
+  }
+  
+  .footer-logo img {
+    max-height: 70px;
+    max-width: 120px;
+  }
+  
+  .footer-logos {
+    gap: 2rem;
+  }
 }

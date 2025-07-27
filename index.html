@@ -8,197 +8,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Cores da paleta oficial do CEMIC - voltando ao original */
-    :root {
-      --cemic-green-dark: #01221B;
-      --cemic-green: #1a4d3a;
-      --cemic-blue-dark: #2c5f7a;
-      --cemic-blue-light: #87ceeb;
-      --cemic-black: #000000;
-    }
-
-    /* Fontes globais */
-    body {
-      font-family: 'Open Sans', 'Arial', sans-serif;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Roboto', 'Arial', sans-serif;
-      font-weight: 500;
-    }
-
-    /* Navbar customizada */
-    .navbar-custom {
-      background-color: var(--cemic-green) !important;
-      padding: 0.5rem 0; /* Reduzido para acompanhar o logo menor */
-    }
-
-    .navbar-brand {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar-brand img {
-      height: 63px !important; /* 30% menor que 90px */
-      width: auto;
-      max-width: none;
-      object-fit: contain;
-    }
-
-    .navbar-nav .nav-link {
-      color: white !important;
-      margin: 0 0.5rem;
-      font-weight: 500;
-    }
-
-    .navbar-nav .nav-link:hover {
-      color: var(--cemic-blue-light) !important;
-    }
-
-    .navbar-nav .nav-link.active {
-      color: var(--cemic-blue-light) !important;
-    }
-
-    .dropdown-menu {
-      background-color: var(--cemic-green);
-    }
-
-    .dropdown-item {
-      color: white !important;
-    }
-
-    .dropdown-item:hover {
-      background-color: var(--cemic-green-dark);
-      color: white !important;
-    }
-
-    /* Banner principal - apenas imagem */
-    .hero-banner {
-      background: url('assets/img/banner.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 400px;
-      width: 100%;
-    }
-
-    /* Remover overlay do banner */
-
-    /* Botões de acessibilidade */
-    .accessibility-controls {
-      background-color: rgba(255,255,255,0.1);
-      border-radius: 20px;
-      padding: 0.3rem;
-    }
-
-    .accessibility-controls .btn {
-      border-radius: 15px;
-      margin: 0 0.1rem;
-    }
-
-    /* Seção de conteúdo principal */
-    .main-content {
-      padding: 3rem 0;
-      background-color: #f8f9fa;
-    }
-
-    .content-placeholder {
-      background: white;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      border-left: 4px solid var(--cemic-green);
-    }
-
-    /* Rodapé reestruturado */
-    .footer-custom {
-      background-color: var(--cemic-green);
-      color: white;
-      padding: 1.5rem 0 0 0;
-      margin: 0;
-    }
-
-    .footer-info {
-      text-align: center;
-      padding: 1rem 0; /* Reduzido de 1.5rem para 1rem */
-      background-color: var(--cemic-green);
-      display: flex;
-      align-items: center; /* Centraliza verticalmente */
-      justify-content: center; /* Centraliza horizontalmente */
-      min-height: 80px; /* Define altura mínima */
-    }
-
-    .footer-info .container {
-      margin: auto; /* Garante centralização total */
-    }
-
-    .footer-info p {
-      margin-bottom: 0.3rem; /* Espaçamento menor entre as linhas */
-      line-height: 1.4; /* Altura da linha ajustada */
-    }
-
-    .footer-info p:last-child {
-      margin-bottom: 0;
-    }
-
-    .footer-logos-section {
-      background-color: white;
-      padding: 2.5rem 0;
-      margin: 0;
-    }
-
-    .footer-logos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-logo {
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer-logo img {
-      max-height: 90px;
-      max-width: 150px;
-      object-fit: contain;
-    }
-
-    /* Responsividade - ajuste do logo em mobile */
-    @media (max-width: 768px) {
-      .navbar-brand img {
-        height: 49px !important; /* 30% menor que 70px */
-        padding: 6px;
-      }
-      
-      .navbar-custom {
-        padding: 0.4rem 0; /* Ainda menor no mobile */
-      }
-      
-      .footer-info {
-        padding: 0.8rem 0; /* Menor no mobile também */
-        min-height: 70px; /* Altura menor no mobile */
-      }
-      
-      .footer-logo img {
-        max-height: 70px;
-        max-width: 120px;
-      }
-      
-      .footer-logos {
-        gap: 2rem;
-      }
-    }
-  </style>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -237,6 +46,9 @@
               <li><a class="dropdown-item" href="acervo.html">Documentos</a></li>
               <li><a class="dropdown-item" href="#">Imagens Históricas</a></li>
               <li><a class="dropdown-item" href="#">Periódicos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="pesquisa-acervo.html">Pesquisa de Acervo</a></li>
+              <li><a class="dropdown-item" href="contribua.html">Contribua com o CEMIC</a></li>
             </ul>
           </li>
 
@@ -278,8 +90,27 @@
     </div>
   </nav>
 
-  <!-- BANNER PRINCIPAL - Apenas imagem -->
-  <section class="hero-banner"></section>
+  <!-- BANNER CARROSSEL DINÂMICO -->
+  <section class="hero-carousel">
+    <div class="carousel-container">
+      <div class="carousel-slides" id="carouselSlides">
+        <!-- Slides gerados dinamicamente via JavaScript -->
+      </div>
+      
+      <!-- Indicadores -->
+      <div class="carousel-indicators" id="carouselIndicators">
+        <!-- Indicadores gerados automaticamente -->
+      </div>
+      
+      <!-- Controles de navegação -->
+      <button class="carousel-control prev" onclick="previousSlide()" title="Imagem anterior">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="carousel-control next" onclick="nextSlide()" title="Próxima imagem">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </section>
 
   <!-- CONTEÚDO PRINCIPAL -->
   <section class="main-content">

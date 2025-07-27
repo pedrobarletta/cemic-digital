@@ -3,26 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Título da Página - CEMIC Digital</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Publicações - CEMIC Digital</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">CEMIC Digital</a>
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-cemic.png" alt="CEMIC Digital">
+      </a>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Apresentação</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Apresentação
+            </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="sobre.html">Sobre o CEMIC</a></li>
               <li><a class="dropdown-item" href="#">Política de Acervos</a></li>
@@ -31,30 +40,52 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Acervo</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Acervo
+            </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="acervo.html">Documentos</a></li>
               <li><a class="dropdown-item" href="#">Imagens Históricas</a></li>
               <li><a class="dropdown-item" href="#">Periódicos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="pesquisa-acervo.html">Pesquisa de Acervo</a></li>
+              <li><a class="dropdown-item" href="contribua.html">Contribua com o CEMIC</a></li>
             </ul>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Publicações</a>
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Publicações
+            </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="publicacoes.html">Guias e Artigos</a></li>
             </ul>
           </li>
 
-          <li class="nav-item"><a class="nav-link" href="mediacao.html">Mediação Cultural</a></li>
-          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="mediacao.html">Mediação Cultural</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Notícias e Eventos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
         </ul>
 
-        <!-- Acessibilidade -->
-        <div class="d-flex ms-3">
-          <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm me-2" title="Alternar contraste">🌗</button>
-          <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm me-1" title="Aumentar fonte">A+</button>
-          <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">A-</button>
+        <!-- Controles de Acessibilidade -->
+        <div class="accessibility-controls d-flex ms-3">
+          <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm" title="Alternar contraste">
+            <i class="bi bi-circle-half"></i>
+          </button>
+          <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm" title="Aumentar fonte">
+            A+
+          </button>
+          <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">
+            A-
+          </button>
         </div>
       </div>
     </div>
@@ -70,9 +101,35 @@
   </ul>
 </main>
 
-  <!-- RODAPÉ -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">Projeto realizado com recursos da PNAB 2025 • Governo Federal • Ministério da Cultura</p>
+  <!-- RODAPÉ REESTRUTURADO -->
+  <footer class="footer-custom">
+    <!-- Informações do projeto -->
+    <div class="footer-info">
+      <div class="container">
+        <p>Projeto realizado com recursos da PNAB 2025</p>
+        <p>Governo Federal • Ministério da Cultura</p>
+      </div>
+    </div>
+    
+    <!-- Logos dos parceiros em fundo branco -->
+    <div class="footer-logos-section">
+      <div class="container">
+        <div class="footer-logos">
+          <div class="footer-logo">
+            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-santana-parnaiba.png" alt="Prefeitura de Santana de Parnaíba">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-cemic-verde.png" alt="CEMIC" class="logo-cemic-rodape">
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
