@@ -106,6 +106,62 @@ Para rodar localmente:
 
 Este é um PROTÓTIPO que demonstra as funcionalidades propostas. Não se trata da criação de um site oficial, pois isso envolveria decisões e disponibilidade por parte da gestão pública municipal. No entanto, este protótipo poderá servir como base ou referência futura, caso haja interesse do poder público em dar continuidade e institucionalizar a iniciativa.
 
+## ORIENTAÇÕES PARA IMPLEMENTAÇÃO FUTURA
+
+### SITUAÇÃO ATUAL
+
+**O que foi entregue:**
+- Protótipo funcional de site estático (HTML/CSS/JavaScript)
+- Demonstração visual de como o acervo poderia ser apresentado
+- Estrutura completa com 16 coleções organizadas
+- Sistema de navegação e acessibilidade implementados
+
+**Limitação principal:**
+O site atual é estático - qualquer alteração de conteúdo requer edição manual do código HTML.
+
+### PRÓXIMO PASSO RECOMENDADO
+
+Para tornar o site operacional, é necessário implementar um **Sistema de Gestão de Conteúdo (CMS)** que permita aos funcionários do CEMIC adicionar e editar conteúdo sem conhecimento técnico.
+
+**Opção Simples e Viável:**
+- **WordPress** com tema customizado baseado no design atual
+- Permite que funcionários adicionem novos itens ao acervo, notícias e eventos
+- Solução amplamente conhecida com suporte local disponível
+- Custo de implementação e manutenção acessível
+
+**Opção Ideal para Acervos:**
+- **Tainacan** - software brasileiro gratuito desenvolvido especificamente para gestão de acervos culturais
+- Atende padrões internacionais de catalogação
+- Interface em português
+- Usado por diversas instituições culturais brasileiras
+
+### JUSTIFICATIVA DO PROJETO
+
+Este protótipo foi desenvolvido para demonstrar de forma concreta como o acervo do CEMIC poderia ser disponibilizado digitalmente à população. A ausência de um acesso digital ao patrimônio histórico-cultural limita o alcance das ações do centro e dificulta pesquisas acadêmicas e consultas cidadãs.
+
+O formato de protótipo permite que a administração:
+1. Visualize o potencial do projeto antes de investir recursos
+2. Teste a receptividade da população
+3. Utilize como base para licitações ou contratações futuras
+4. Adapte conforme necessidades específicas identificadas
+
+### RECOMENDAÇÃO FINAL
+
+Sugere-se que a administração municipal avalie a implementação em duas etapas:
+
+**Etapa 1 - Piloto (3-6 meses)**
+- Implementar CMS básico
+- Capacitar 1-2 funcionários
+- Digitalizar e cadastrar uma coleção como teste
+- Avaliar uso e feedback da população
+
+**Etapa 2 - Expansão (se piloto for bem-sucedido)**
+- Expandir para todas as coleções
+- Integrar com outros sistemas municipais
+- Desenvolver funcionalidades adicionais conforme demanda
+
+Esta abordagem gradual minimiza riscos e permite ajustes baseados em uso real.
+
 ### FINANCIAMENTO
 
 Projeto realizado com recursos da PNAB 2025
