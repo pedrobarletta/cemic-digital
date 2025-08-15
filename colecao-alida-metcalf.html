@@ -234,22 +234,36 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
   <script>
-    // Garantir atualização dos logos nesta página específica
+    // Função para verificar e executar updateFooterLogos
+    function tryUpdateLogos() {
+      if (typeof updateFooterLogos === 'function') {
+        console.log('🔄 Executando updateFooterLogos em colecao-alida-metcalf.html');
+        updateFooterLogos();
+        return true;
+      }
+      return false;
+    }
+    
+    // Tentar imediatamente após o script carregar
+    if (!tryUpdateLogos()) {
+      // Se não funcionou, configurar múltiplas tentativas
+      const intervals = [100, 300, 500, 1000, 2000];
+      intervals.forEach(delay => {
+        setTimeout(tryUpdateLogos, delay);
+      });
+    }
+    
+    // Também executar nos eventos padrão
     document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        if (typeof updateFooterLogos === 'function') {
-          updateFooterLogos();
-        }
-      }, 500);
+      tryUpdateLogos();
+      // Garantir execução após o Bootstrap também carregar
+      setTimeout(tryUpdateLogos, 100);
     });
     
-    // Backup adicional
     window.addEventListener('load', function() {
-      setTimeout(function() {
-        if (typeof updateFooterLogos === 'function') {
-          updateFooterLogos();
-        }
-      }, 1000);
+      tryUpdateLogos();
+      // Última tentativa após tudo carregar
+      setTimeout(tryUpdateLogos, 500);
     });
   </script>
 </body>
