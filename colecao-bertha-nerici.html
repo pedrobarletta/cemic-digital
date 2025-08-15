@@ -55,6 +55,7 @@
               <li><a class="dropdown-item" href="colecao-casa-patrimonio.html">Coleção Casa do Patrimônio</a></li>
               <li><a class="dropdown-item" href="colecao-cemic.html">Fundo/Coleção CEMIC</a></li>
               <li><a class="dropdown-item" href="colecao-delegacia.html">Coleção Delegacia (SSP)</a></li>
+              <li><a class="dropdown-item" href="colecao-imagens-historicas.html">Coleção Imagens Históricas</a></li>
               <li><a class="dropdown-item" href="colecao-prefeitura.html">Coleção Prefeitura Municipal</a></li>
               <li><a class="dropdown-item" href="colecao-ralph-gisbrecht.html">Coleção Ralph Mennucci Gisbrecht</a></li>
               <li><a class="dropdown-item" href="colecao-cm-colaco.html">Coleção C. M. Colaço</a></li>
@@ -120,6 +121,27 @@
     <div class="row">
       <div class="col-lg-8">
         <h1 class="mb-4">Coleção Bertha Moraes Nérici</h1>
+        
+        <!-- Seção Biográfica -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <img src="conteudo acervo/foto_bertha_nerici_moraes.png" alt="Bertha Moraes Nérici" class="float-end ms-3 mb-3" style="width: 200px; border: 1px solid #ddd; padding: 5px;">
+            <h5 class="card-title">Sobre Bertha Moraes Nérici</h5>
+            <p class="card-text">
+              Bertha Moraes Nérici foi uma enfermeira brasileira, natural de Santana de Parnaíba. Destaca-se por ser a primeira mulher a servir no 
+              Corpo de Enfermagem da Força Expedicionária Brasileira durante a Segunda Guerra Mundial, fazendo parte do primeiro grupamento feminino 
+              no Exército brasileiro. Em 4 de agosto de 1944, embarcou com destino a Nápoles, retornando ao Brasil em 3 de outubro de 1945, 
+              no navio James Parker. Durante seu período no front italiano, serviu em vários hospitais de campanha do exército americano.
+            </p>
+            <p class="card-text">
+              Por seus serviços, foi promovida à patente de 1º Capitão, sendo condecorada com a Medalha de Guerra e a Medalha de Campanha.
+            </p>
+            <p class="card-text">
+              <strong>Nascimento:</strong> 2 de novembro de 1921, em Santana de Parnaíba<br>
+              <strong>Morte:</strong> 14 de julho de 2005, em Santana de Parnaíba
+            </p>
+          </div>
+        </div>
         
         <div class="card mb-4">
           <div class="card-body">
@@ -193,10 +215,10 @@
       <div class="container">
         <div class="footer-logos">
           <div class="footer-logo">
-            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc">
+            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc" class="logo-aldir-blanc-rodape">
           </div>
           <div class="footer-logo">
-            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura">
+            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura" class="logo-governo-cultura-rodape">
           </div>
           <div class="footer-logo">
             <img src="assets/img/logo-santana-parnaiba.png" alt="Prefeitura de Santana de Parnaíba">
@@ -211,5 +233,24 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script>
+    // Garantir atualização dos logos nesta página específica
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (typeof updateFooterLogos === 'function') {
+          updateFooterLogos();
+        }
+      }, 500);
+    });
+    
+    // Backup adicional
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        if (typeof updateFooterLogos === 'function') {
+          updateFooterLogos();
+        }
+      }, 1000);
+    });
+  </script>
 </body>
 </html>

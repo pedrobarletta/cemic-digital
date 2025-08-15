@@ -54,6 +54,7 @@
               <li><a class="dropdown-item" href="colecao-casa-patrimonio.html">Coleção Casa do Patrimônio</a></li>
               <li><a class="dropdown-item" href="colecao-cemic.html">Fundo/Coleção CEMIC</a></li>
               <li><a class="dropdown-item" href="colecao-delegacia.html">Coleção Delegacia (SSP)</a></li>
+              <li><a class="dropdown-item" href="colecao-imagens-historicas.html">Coleção Imagens Históricas</a></li>
               <li><a class="dropdown-item" href="colecao-prefeitura.html">Coleção Prefeitura Municipal</a></li>
               <li><a class="dropdown-item" href="colecao-ralph-gisbrecht.html">Coleção Ralph Mennucci Gisbrecht</a></li>
               <li><a class="dropdown-item" href="colecao-cm-colaco.html">Coleção C. M. Colaço</a></li>
@@ -107,8 +108,9 @@
   </nav>
 
   <!-- BANNER CARROSSEL DINÂMICO -->
-  <section class="hero-carousel">
-    <div class="carousel-container">
+  <div class="carousel-wrapper">
+    <section class="hero-carousel">
+      <div class="carousel-container">
       <div class="carousel-slides" id="carouselSlides">
         <!-- Slides gerados dinamicamente via JavaScript -->
       </div>
@@ -125,8 +127,9 @@
       <button class="carousel-control next" onclick="nextSlide()" title="Próxima imagem">
         <i class="bi bi-chevron-right"></i>
       </button>
-    </div>
-  </section>
+      </div>
+    </section>
+  </div>
 
   <!-- CONTEÚDO PRINCIPAL -->
   <section class="main-content">
@@ -136,35 +139,88 @@
         <p class="lead">Este é um protótipo de acervo digital histórico-cultural de Santana de Parnaíba.</p>
         <p>Aqui você poderá acessar documentos históricos, imagens, publicações e muito mais sobre a rica história de nossa cidade.</p>
         
-        <!-- Placeholder para futuras seções -->
-        <div class="row mt-4">
-          <div class="col-md-4 mb-3">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <i class="bi bi-file-earmark-text display-4 text-primary mb-3"></i>
-                <h5 class="card-title">Documentos</h5>
-                <p class="card-text">Acesse nossa coleção de documentos históricos</p>
-              </div>
+        <!-- Seção de Coleções em Destaque -->
+        <div class="mt-5 mb-4">
+          <h3 class="mb-4">Coleções em Destaque</h3>
+          <div class="row">
+            <!-- Banner Coleção Antônio Branco -->
+            <div class="col-md-4 mb-3">
+              <a href="colecao-antonio-branco.html" class="text-decoration-none">
+                <div class="card h-100 collection-banner">
+                  <div class="card-img-container" style="height: 300px; overflow: hidden; position: relative;">
+                    <img src="conteudo acervo/foto_antonio_branco.png" class="card-img-top" alt="Antônio Branco" 
+                         style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+                    <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                      <h5 class="text-white">Coleção Antônio Branco</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Documentos pessoais e biblioteca do ex-prefeito que dá nome à Biblioteca Municipal.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Banner Coleção Bertha Nérici -->
+            <div class="col-md-4 mb-3">
+              <a href="colecao-bertha-nerici.html" class="text-decoration-none">
+                <div class="card h-100 collection-banner">
+                  <div class="card-img-container" style="height: 300px; overflow: hidden; position: relative;">
+                    <img src="conteudo acervo/foto_bertha_nerici_moraes.png" class="card-img-top" alt="Bertha Moraes Nérici" 
+                         style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+                    <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                      <h5 class="text-white">Coleção Bertha Moraes Nérici</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Acervo da primeira mulher a servir na Força Expedicionária Brasileira.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Banner Imagens Históricas -->
+            <div class="col-md-4 mb-3">
+              <a href="colecao-imagens-historicas.html" class="text-decoration-none">
+                <div class="card h-100 collection-banner">
+                  <div class="card-img-container" style="height: 300px; overflow: hidden; position: relative;">
+                    <img src="conteudo acervo/livro da Polyanthea de 1925/igreja matriz.JPG" class="card-img-top" alt="Igreja Matriz" 
+                         style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                      <h5 class="text-white">Livro da Polyanthea de 1925</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Coleção fotográfica histórica retratando Santana de Parnaíba no início do século XX.</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <i class="bi bi-images display-4 text-success mb-3"></i>
-                <h5 class="card-title">Imagens</h5>
-                <p class="card-text">Explore fotos históricas da cidade</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <i class="bi bi-book display-4 text-warning mb-3"></i>
-                <h5 class="card-title">Publicações</h5>
-                <p class="card-text">Leia artigos e guias sobre nossa história</p>
-              </div>
-            </div>
-          </div>
+        </div>
+
+        <!-- Seção Sobre o CEMIC -->
+        <div class="about-cemic-section mt-5 mb-4">
+          <h3 class="mb-4">Sobre o CEMIC</h3>
+          <p class="lead">
+            O Centro de Memória e Integração Cultural de Santana de Parnaíba é o guardião 
+            da história de uma das cidades mais antigas do Brasil, fundada em 1580.
+          </p>
+          <p>
+            Com um acervo de mais de 10.000 documentos, fotografias e objetos que datam 
+            de 1789 até os dias atuais, o CEMIC preserva a memória de personalidades, 
+            instituições e momentos que moldaram nossa identidade cultural. Nossas 16 coleções 
+            incluem registros da Câmara Municipal, acervos pessoais de figuras importantes como 
+            Antônio Branco e Bertha Nérici, além de uma rica hemeroteca e biblioteca especializada.
+          </p>
+          <p>
+            O projeto CEMIC Digital, realizado com recursos da PNAB 2025, democratiza o acesso 
+            a este patrimônio, permitindo que pesquisadores, estudantes e cidadãos explorem 
+            nossa história de qualquer lugar.
+          </p>
+          <a href="sobre.html" class="btn btn-primary">
+            <i class="bi bi-arrow-right-circle me-2"></i>Conheça nossa história completa
+          </a>
         </div>
       </div>
     </div>
@@ -185,10 +241,10 @@
       <div class="container">
         <div class="footer-logos">
           <div class="footer-logo">
-            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc">
+            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc" class="logo-aldir-blanc-rodape">
           </div>
           <div class="footer-logo">
-            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura">
+            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura" class="logo-governo-cultura-rodape">
           </div>
           <div class="footer-logo">
             <img src="assets/img/logo-santana-parnaiba.png" alt="Prefeitura de Santana de Parnaíba">
@@ -203,94 +259,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
-  <script>
-    // Adicionar estilos de alto contraste mais abrangentes
-    const style = document.createElement('style');
-    style.textContent = `
-      .high-contrast {
-        background-color: #000 !important;
-        color: #fff !important;
-      }
-      
-      .high-contrast .main-content,
-      .high-contrast .content-placeholder {
-        background-color: #000 !important;
-        color: #fff !important;
-      }
-      
-      .high-contrast .card {
-        background-color: #111 !important;
-        color: #fff !important;
-        border: 2px solid #fff !important;
-      }
-      
-      .high-contrast .card-body {
-        background-color: #111 !important;
-        color: #fff !important;
-      }
-      
-      .high-contrast .card-title {
-        color: #fff !important;
-      }
-      
-      .high-contrast .card-text {
-        color: #ccc !important;
-      }
-      
-      .high-contrast h1,
-      .high-contrast h2,
-      .high-contrast h3,
-      .high-contrast h4,
-      .high-contrast h5,
-      .high-contrast h6 {
-        color: #fff !important;
-      }
-      
-      .high-contrast p,
-      .high-contrast .lead {
-        color: #ccc !important;
-      }
-      
-      .high-contrast a {
-        color: #00ffff !important;
-      }
-      
-      .high-contrast .btn-primary,
-      .high-contrast .btn-success,
-      .high-contrast .btn-warning {
-        background-color: #00ffff !important;
-        border-color: #00ffff !important;
-        color: #000 !important;
-      }
-      
-      .high-contrast .bi-file-earmark-text {
-        color: #00ffff !important;
-      }
-      
-      .high-contrast .bi-images {
-        color: #00ffff !important;
-      }
-      
-      .high-contrast .bi-book {
-        color: #00ffff !important;
-      }
-      
-      .high-contrast .navbar,
-      .high-contrast .footer-custom,
-      .high-contrast .footer-info {
-        background-color: #111 !important;
-      }
-      
-      .high-contrast .footer-logos-section {
-        background-color: #222 !important;
-      }
-      
-      /* Logo CEMIC específico no rodapé - trocar para versão branca no modo contraste */
-      .high-contrast .logo-cemic-rodape {
-        content: url('assets/img/logo-cemic.png');
-      }
-    `;
-    document.head.appendChild(style);
-  </script>
 </body>
 </html>

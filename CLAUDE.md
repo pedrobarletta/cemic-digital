@@ -169,6 +169,26 @@ A comprehensive collections management system was implemented to organize and pr
 15. Hemeroteca - Newspaper and periodical collection
 16. Biblioteca - Bibliographic collection
 
+#### Biographical Content Integration
+- **Biographical sections added** to three collection pages:
+  - `colecao-antonio-branco.html`: Biography with military service details and photo
+  - `colecao-bertha-nerici.html`: Personal history and education background
+  - `colecao-alida-metcalf.html`: Academic background and research focus
+- **Image alignment**: Photos aligned to the right using Bootstrap float classes
+- **Content source**: Text extracted from `conteudo acervo/texto exemplo acervos.txt`
+
+#### Historical Images Collection (Livro da Polyanthea de 1925)
+- **New collection page**: `colecao-imagens-historicas.html`
+- **Gallery implementation**: 20 historical images from Polyanthea book
+- **Modal functionality**: Bootstrap modal for enlarged image viewing
+- **Responsive grid**: Bootstrap grid system for proper image display
+- **Navigation integration**: Added to dropdown menu structure
+
+#### Homepage Banner Enhancement
+- **Collections spotlight**: Added "Coleções em Destaque" section
+- **Three featured collections**: Antonio Branco, Bertha Nérici, Igreja Matriz (Polyanthea)
+- **Carousel integration**: Enhanced banner carousel with 4 slides total
+
 #### Technical Implementation
 - **Template-based approach**: Consistent structure across all collection pages
 - **Bootstrap 5.3 integration**: Responsive design maintained
@@ -180,15 +200,51 @@ A comprehensive collections management system was implemented to organize and pr
 - **16 new collection pages** (colecao-*.html, hemeroteca.html, biblioteca.html)
 - **9 existing pages updated** with new navigation (index.html, sobre.html, etc.)
 - **acervo.html completely restructured** as collections overview
+- **Biography content added** to 3 collection pages
+- **Homepage enhanced** with collections spotlight section
 
-#### Known Issues/Future Considerations
-1. **Navigation consolidation**: Original content categories (Documentos, Imagens Históricas, Periódicos) were removed during implementation
-2. **Content population**: Collection pages currently show placeholder content pending digitization
-3. **Search integration**: Individual collection pages not yet integrated with pesquisa-acervo.html functionality
+#### Known Issues/Current Development Status
+
+**1. Carousel Display Problem (RESOLVED - November 2025)**
+- **Issue**: Banner carousel on homepage only shows blurred background, sharp centered image not visible
+- **Solution**: Restructured to use sibling elements instead of parent-child to avoid filter inheritance
+- **Status**: ✅ RESOLVIDO - Carrossel funcionando corretamente
+
+**2. Logo de Alto Contraste - Problema Parcialmente Resolvido (November 2025)**
+- **Issue**: Algumas páginas não trocam logos para versões de alto contraste
+- **Páginas afetadas**: colecao-antonio-branco.html, colecao-bertha-nerici.html, colecao-alida-metcalf.html
+- **Investigação realizada**:
+  - Classes HTML verificadas e corretas
+  - Arquivos de imagem existem
+  - JavaScript robusto com múltiplas tentativas implementado
+  - Scripts inline adicionados como tentativa de correção
+- **Status**: ⚠️ PARCIALMENTE RESOLVIDO - 23 de 26 páginas funcionando corretamente
+
+**2. Future Considerations**
+- **Navigation consolidation**: Original content categories (Documentos, Imagens Históricas, Periódicos) were removed during implementation
+- **Content population**: Collection pages currently show placeholder content pending digitization
+- **Search integration**: Individual collection pages not yet integrated with pesquisa-acervo.html functionality
+- **Carousel fix**: Remove debug CSS once display issue is resolved
+
+#### Development Guidelines for Continuation
+
+**When working on carousel issue:**
+1. Check filter inheritance in CSS - blur may be affecting child elements
+2. Test with static HTML first before JavaScript generation
+3. Consider using `transform: scale()` instead of CSS filters for background effect
+4. Verify background-image URLs are loading correctly in browser dev tools
+
+**For future enhancements:**
+1. Populate collection pages with actual digitized content
+2. Integrate search functionality across collections
+3. Add metadata schemas for better cataloging
+4. Consider implementing user contribution workflows
 
 #### Impact
 - Enhanced user experience with clear collection organization
 - Improved discoverability of archival materials
+- Rich biographical content showcasing collection contexts
+- Historical image gallery demonstrating digitization capabilities
 - Scalable structure for future content additions
 - Maintained prototype status while demonstrating institutional archive capabilities
 
