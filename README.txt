@@ -91,11 +91,6 @@ A ideia surgiu de conversas entre cidadãos sobre a ausência de um acervo acess
 - Galeria de imagens históricas funcionnal
 - Responsividade e acessibilidade
 
-**Problema Conhecido:**
-- Banner carrossel: apenas fundo desfocado sendo exibido, imagem nítida não aparece
-- Debug ativo com bordas vermelhas para investigação
-- Localização: assets/css/style.css (linhas 123-126) e assets/js/scripts.js
-
 ### EXECUÇÃO LOCAL
 
 Para rodar localmente:
